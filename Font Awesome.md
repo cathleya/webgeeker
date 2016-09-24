@@ -4,5 +4,5 @@
 ## [The Icons](http://fontawesome.io/icons/)
 ### The complete set of 634 icons in Font Awesome 4.6.3
 
-## [http://fontawesome.io/cheatsheet/](http://fontawesome.io/cheatsheet/)
+## [Cheatsheet](http://fontawesome.io/cheatsheet/)
 ### The complete Font Awesome 4.6.3 icon reference
