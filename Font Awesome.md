@@ -27,7 +27,7 @@
 
 ## webgeeker
 ## Enabled options
-### Font Awesome v4.6.3 · <span><del>Auto Accessibility (unavailable) · Asynchronous Icons (unavailable) · Icon Stats</del></span
+### Font Awesome v4.6.3 · <span><del>Auto Accessibility (unavailable) · Asynchronous Icons (unavailable) · Icon Stats</del></span>
 
 ```css
   <link rel="stylesheet" href="https://use.fontawesome.com/38c8f25ab2.css">
