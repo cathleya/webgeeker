@@ -34,9 +34,22 @@ _single underscores_
 **double asterisks**  
 __double underscores__  
 
+## imgaes
+```
 ![http://cdn.xgqfrms.xyz/logo/icon.png](http://cdn.xgqfrms.xyz/logo/icon.png) 
 
 [http://cdn.xgqfrms.xyz/logo/icon.png](http://cdn.xgqfrms.xyz/logo/icon.png)
+```
+![http://cdn.xgqfrms.xyz/logo/icon.png](http://cdn.xgqfrms.xyz/logo/icon.png) 
+
+[http://cdn.xgqfrms.xyz/logo/icon.png](http://cdn.xgqfrms.xyz/logo/icon.png)
+
+## images links
+```
+[![http://cdn.xgqfrms.xyz/logo/icon.png](http://cdn.xgqfrms.xyz/logo/icon.png)](http://cdn.xgqfrms.xyz/logo/icon.png)
+```
+[![http://cdn.xgqfrms.xyz/logo/icon.png](http://cdn.xgqfrms.xyz/logo/icon.png)](http://cdn.xgqfrms.xyz/logo/icon.png)
+
 
 ### Unordered list(* + - 3任选1)
 *   Red
