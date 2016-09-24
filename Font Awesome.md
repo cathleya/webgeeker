@@ -34,3 +34,5 @@
 ```css
   <link rel="stylesheet" href="https://use.fontawesome.com/38c8f25ab2.css">
 ```
+
+![font-awesome-cdn-webgeeker.PNG](./images/font-awesome-cdn-webgeeker.PNG)
