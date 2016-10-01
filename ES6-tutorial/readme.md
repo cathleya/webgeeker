@@ -1,3 +1,6 @@
+> # [Learn ES6 (ECMAScript 2015)](https://egghead.io/lessons/arrow-function?course=learn-es6-ecmascript-2015)
+
+
 # ES6-tutorial (JavaScript 精粹)
 
 ## 数据类型
