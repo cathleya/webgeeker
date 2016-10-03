@@ -618,8 +618,8 @@ unless language == "Jade"
 ``` 
 ## 模板继承(Template Inheritance)
 模板继承是一种方式来定义基本模板结构，在多个地方重新使用它。
-父模板定义为子模板与“块”的关键字覆盖区域
-孩子继承与“扩展”关键字此模板。
+为子模板用“block”的关键字覆盖父模板定义的区域
+孩子用“extends”关键字继承此模板。
 ###  the "filename" option is required to use "extends" with "relative" paths
 
 parent template **base.jade**:
@@ -707,7 +707,9 @@ p I wonder what the weather is like today?
 </div>
 ``` 
 
-**********************************************************************************************************
+***
+***
+> > > new
 
 
 ## 过滤器
