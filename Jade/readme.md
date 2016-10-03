@@ -288,67 +288,127 @@ ul
 
 ## 属性
 
-Jade 现在支持使用'(' 和 ')' 作为属性分隔符
+Jade 现在支持使用'(' 和 ')' 作为属性分隔符; "**'**" => "**"**" (单引号 => 双引号)
 ```code
 a(href='/login', title='View login page') Login
 ```
-当一个值是 undefined 或者 null 属性不会被加上, 所以呢，它不会编译出 'something="null"'.
+渲染为：
+```html
+<a href="/login" title="View login page">Login</a>
+```
+属性值是 **undefined / null** 属性不会被加**Element**上,不会编译出 'something="null"'.
 ```code
 div(something=null)
+div(something=undefined)
 ``` 
-Boolean 属性也是支持的:
+渲染为：
+```html
+<div></div>
+<div></div>
+``` 
+**Boolean** 属性也是支持的:(defualt属性为true)
 ```code
 input(type="checkbox", checked)
 ``` 
-使用代码的Boolean 属性只有当属性为true时才会输出：
-```code
-input(type="checkbox", checked=someValue)
+渲染为：
+```html
+<input type="checkbox" checked="checked"/>
 ``` 
-多行同样也是可用的：
+或者
+```html
+<input type="checkbox" checked>
+``` 
+
+多行同样也是可用,**加逗号**：
 ```code
 input(type='checkbox',
-  name='agreement',
-  checked)
+      name='agreement',
+      checked)
 ``` 
-多行的时候可以不加逗号：
+渲染为：
+```html
+<input type="checkbox" name="agreement" checked="checked"/>
+``` 
+多行的时候可以**不加逗号**：
 ```code
 input(type='checkbox'
-  name='agreement'
-  checked)
+     name='agreement'
+     checked)
 ``` 
-加点空格，格式好看一点？同样支持
+渲染为：
+```html
+<input type="checkbox" name="agreement" checked="checked"/>
+``` 
+同样支持,加点**空格**格式
 ```code
 input(
   type='checkbox'
   name='agreement'
   checked)
 ``` 
+渲染为：
+```html
+<input type="checkbox" name="agreement" checked="checked"/>
+``` 
 冒号也是支持的:
 ```code
 rss(xmlns:atom="atom")
 ``` 
+渲染为：
+```html
+<rss xmlns:atom="atom"></rss>
+``` 
+
 假如我有一个user 对象 { id: 12, name: 'tobi' } 我们希望创建一个指向"/user/12"的链接 href, 
 我们可以使用普通的javascript字符串连接，如下:
+<del>a(href='/user/' + user.id)= user.name</del>**Error???**
 ```code
 a(href='/user/' + user.id)= user.name
 ``` 
+渲染为：
+```html
+?????????????????????????????????????????????????????
+error
+``` 
 或者我们使用jade的修改方式,这个我想很多使用Ruby或者 CoffeeScript的人会看起来像普通的js..:
+<del>a(href='/user/#{user.id}')= user.name</del>**Error???**
 ```code
 a(href='/user/#{user.id}')= user.name
 ``` 
-class属性是一个特殊的属性，你可以直接传递一个数组，比如bodyClasses = ['user', 'authenticated'] :
+渲染为：
+```html
+?????????????????????????????????????????????????????
+error
+``` 
+class属性是一个特殊的属性，你可以直接传递一个**数组**，比如bodyClasses = ['user', 'authenticated'] :
 ```code
 body(class=bodyClasses)
-```
+``` 
+渲染为：
+```html
+?????????????????????????????????????????????????????
+<body></body>
+``` 
+
 ## HTML
 
-内联的html是可以的，我们可以使用管道定义一段文本 :
+内联的html是可以的，我们可以使用**管道 |**定义一段文本 :
 ```code
 html
   body
     | <h1>Title</h1>
     | <p>foo bar baz</p>
 ``` 
+渲染为：
+```html
+<html>
+  <body>
+    <h1>Title</h1>
+    <p>foo bar baz</p>
+  </body>
+</html>
+``` 
+
 或者我们可以使用**.** 来告诉Jade我们需要一段文本：
 ```code
 html
@@ -356,40 +416,110 @@ html
     <h1>Title</h1>
     <p>foo bar baz</p>
 ``` 
-上面的两个例子都会渲染成相同的结果：
+渲染为：
 ```html
 <html>
-<body>
-<h1>Title</h1>
-<p>foo bar baz</p>
-</body>
+  <body>
+    <h1>Title</h1>
+    <p>foo bar baz</p>
+  </body>
 </html>
 ``` 
-这条规则适应于在jade里的任何文本：
+上面的两个例子都会渲染成相同的结果：
+
+这条规则适应于在jade里的任何文本：???
 ```code
 html
   body
     h1 User <em>#{name}</em>
-```
+``` 
+渲染为：
+```html
+<html>
+  <body>
+    <h1>User <em></em></h1>
+  </body>
+</html>
+``` 
 ## Doctypes
+
+>
+>By default these doctypes should be available. Depending on the implementation this list could be extended.
+
+>5	<!DOCTYPE html>
+>default	<!DOCTYPE html>
+>xml	<?xml version="1.0" encoding="utf-8" ?>
+>transitional	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+>strict	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+>frameset	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+>1.1	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+>basic	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+>mobile	<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+
+
  
-添加文档类型只需要简单的使用 !!!, 或者 doctype 跟上下面的可选项:
-
+> <del>添加文档类型只需要简单的使用 !!!, 或者 doctype 5 ,或者 !!! 5</del>  
+**`!!!` is deprecated, you must now use `doctype`**
+**`doctype 5` is deprecated, you must now use `doctype html`**
+**`!!! 5` is deprecated, you must now use `doctype`**
+```code
 !!!
-会渲染出 transitional 文档类型, 或者:
+``` 
+渲染为：
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+``` 
 
-!!! 5
-or
-
-!!! html
-or
+> 添加文档类型===使用 **doctype html** / doctype  
 ```code
 doctype html
 ``` 
-doctypes 是大小写不敏感的, 所以下面两个是一样的:
+渲染为：
+```html
+<!DOCTYPE html>
+``` 
+添加文档类型===使用  doctype
+```code
+doctype
+``` 
+渲染为：
+```html
+<!DOCTYPE html>
+或
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
 
+doctypes 是大小写不敏感的, 所以下面两个是一样的:
+```code
 doctype Basic
 doctype basic
+``` 
+渲染为：
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+``` 
+
+**文档类型**
+
+```code
+doctype xml
+doctype mobile
+doctype frameset
+doctype 1.1
+doctype strict
+doctype basic
+doctype transitional
+``` 
+渲染为：
+```html
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+``` 
 当然也是可以直接传递一段文档类型的文本：
 
 ```code
@@ -400,26 +530,186 @@ doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN
 ```code
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN>
 ``` 
-会输出 html 5 文档类型. 下面的默认的文档类型，可以很简单的扩展：
 
-```code
-    var doctypes = exports.doctypes = {
-        '5': '<!DOCTYPE html>',
-        'xml': '<?xml version="1.0" encoding="utf-8" ?>',
-        'default': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">',
-        'transitional': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">',
-        'strict': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">',
-        'frameset': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">',
-        '1.1': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">',
-        'basic': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">',
-        'mobile': '<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">'
-    };
-``` 
 通过下面的代码可以很简单的改变默认的文档类型：
 
 ```code
-    jade.doctypes.default = 'whatever you want';
+jade.doctypes.default = 'whatever you want';
 ``` 
+渲染后:
+```html
+<jade class="doctypes default">= 'whatever you want';</jade>
+``` 
+## 分配(Assignment)
+赋值给一个变量只需要前后空格等号。如果空间被省略它会输出一个标签，而不是分配给它里面的价值，所以要小心。
+
+```code
+- var foo = "bar"
+p= foo
+``` 
+渲染后:
+```html
+<p>bar</p>
+``` 
+## 迭代(Iteration)
+遍历序列和对象，您将使用“each”关键字。不同于其它语言也没有必要对括号或大括号。
+
+```code
+each item in ['foo', 'bar', 'baz']
+  li= item
+``` 
+渲染后:
+```html
+<li>foo</li>
+<li>bar</li>
+<li>baz</li>
+``` 
+使用“for”关键字 
+
+```code
+for item in ['foo', 'bar', 'baz']
+  li= item
+``` 
+渲染后:
+```html
+<li>foo</li>
+<li>bar</li>
+<li>baz</li>
+``` 
+可以得到的索引与在循环的附加参数。
+
+```code
+for item, i in ['foo', 'bar', 'baz']
+  li= item
+  li= i
+``` 
+渲染后:
+```html
+<li>foo</li>
+<li>0</li>
+<li>bar</li>
+<li>1</li>
+<li>baz</li>
+<li>2</li>
+``` 
+
+## 条件语句
+条件语句是if / else语句简单。同样也没有必要为(括号或{括号或[括号 ???。
+```code
+- var language = "Jade"
+if language == "Jade"
+  p Awesome
+else
+  p Not awesome
+``` 
+渲染后:
+```html
+<p>Awesome</p>
+``` 
+Jade 也有一个“unless”关键字。这是正常的“如果”语句的负面评价。
+```code
+- var language = "FooLang"
+unless language == "Jade"
+  p Not Awesome
+``` 
+渲染后:
+```html
+<p>Awesome</p>
+``` 
+## 模板继承(Template Inheritance)
+模板继承是一种方式来定义基本模板结构，在多个地方重新使用它。
+父模板定义为子模板与“块”的关键字覆盖区域
+孩子继承与“扩展”关键字此模板。
+###  the "filename" option is required to use "extends" with "relative" paths
+
+parent template **base.jade**:
+```code
+// base.jade
+h1 Hello from the base
+block content
+``` 
+child to use it:
+```code
+// child.jade
+extends base
+block content
+    p This is the child's content
+``` 
+渲染为:(parent.h1 + child.p)
+
+```html
+<h1>Hello from the base</h1>
+<p>This is the child's content</p>
+``` 
+### 块追加和前置(Block Append and Prepend)
+当使用继承和盖帽，有时候我们要添加的内容，而不是覆盖它。
+我们可以用“追加”和“前加上”关键词这样做。
+通过其自身的块名一起，或作为参数传递给“block”的关键字。
+
+parent template **base.jade**:
+```code
+// base.jade
+h1 Hello from the base
+block content
+    p Welcome
+``` 
+child to use it:
+```code
+// child.jade
+extends base
+block append content
+    p And goodbye
+``` 
+渲染为:(parent.h1&.p + child.p)
+
+```html
+<h1>Hello from the base</h1>
+<p>Welcome</p>
+<p>And goodbye</p>
+``` 
+正如前面提到的，你可以跳过block关键字，只需使用追加或预先准备。
+```code
+// child.jade
+extends base
+append content
+    p And goodbye
+``` 
+### 模板包括(Template Includes)
+继承是好的，所有的，但有时我们需要的只是一个片段来在各个地方的页面的某些部分补充。
+用继承这样做是不是一个好主意。
+使用“include”关键字让我们到另一个文件的来源补充。
+
+
+jade files:  ??? **.widget**
+```code
+// widget.jade
+.widget
+    p The weather is sunny today
+``` 
+
+```code
+// page.jade
+p I wonder what the weather is like today?
+include widget
+``` 
+page.jade的输出将在逻辑上等同与编译：
+```code
+p I wonder what the weather is like today?
+.widget
+  p The weather is sunny today
+``` 
+渲染为: 
+
+```html
+<p>I wonder what the weather is like today?</p>
+<div class="widget">
+  <p>The weather is sunny today</p>
+</div>
+``` 
+
+**********************************************************************************************************
+
+
 ## 过滤器
 
 过滤器前缀 :, 比如 :markdown 会把下面块里的文本交给专门的函数进行处理。查看顶部 特性 里有哪些可用的过滤器。
@@ -433,8 +723,10 @@ body
 渲染为:
 
 ```code
-   <body><p>Woah! jade <em>and</em> markdown, very <strong>cool</strong> we can even link to <a href="http://google.com">stuff</a></p></body>
+<body><p>Woah! jade <em>and</em> markdown, very <strong>cool</strong> we can even link to <a href="http://google.com">stuff</a></p></body>
 ``` 
+
+
 
 ## 代码
 
