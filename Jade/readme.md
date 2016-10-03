@@ -58,7 +58,7 @@ div#foo.bar.baz
 ```html
 <div id="foo"></div><div class="bar"></div>
 ``` 
-标签文本
+## 文本 && 内容
 
 只需要简单的把内容放在标签之后：
 ```code
