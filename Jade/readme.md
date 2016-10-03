@@ -16,29 +16,37 @@ CRLF 和 CR 会在编译之前被转换为 LF
 ```code
 html
 ``` 
-转换为 <html></html>
-
+转换为
+```code
+<html></html>
+``` 
 标签 id:
 
 ```code
 div#container
 ``` 
-转换为 <div id="container"></div>
-
+转换为 
+```code
+<div id="container"></div>
+``` 
 标签 class:
 
 ```code
 div.user-details
 ``` 
-转换为 <div class="user-details"></div>
-
+转换为 
+```code
+<div class="user-details"></div>
+``` 
 多个 class,id? :
 
 ```code
 div#foo.bar.baz
 ``` 
-转换为 <div id="foo" class="bar baz"></div>
-
+转换为 
+```code
+<div id="foo" class="bar baz"></div>
+``` 
 (div 默认标签，可以省略):
 
 ```code
@@ -56,7 +64,10 @@ div#foo.bar.baz
 ```code
 p wahoo!
 ``` 
-渲染为 <p>wahoo!</p>.
+渲染为 
+```code
+<p>wahoo!</p>.
+``` 
 
 大段的文本：
 ```code
@@ -66,21 +77,28 @@ p
   | super cool
   | go jade go
 ``` 
-渲染为 <p>foo bar baz rawr.....</p>
+渲染为 
+```code
+<p>foo bar baz rawr.....</p>
+``` 
 
 怎么和数据结合起来？ 
 所有类型的文本展示都可以和数据结合起来，如果我们把{ name: 'tj', email: 'tj@vision-media.ca' } 传给编译函数，下面是模板上的写法:
 ```code
 #user #{name} &lt;#{email}&gt;
 ```
-渲染为 <div id="user">tj &lt;tj@vision-media.ca&gt;</div>
-
+渲染为 
+```code
+<div id="user">tj &lt;tj@vision-media.ca&gt;</div>
+``` 
 要输出#{} ,需要转义一下!
 ```code
 p \#{something}
 ``` 
-它会输出<p>#{something}</p>
-
+它会输出
+```code
+<p>#{something}</p>
+``` 
 同样可以使用非转义的变量!{html}, 下面的模板将直接输出一个script标签
 ```code
 - var html = "<script></script>"
@@ -137,8 +155,9 @@ p .
 <p>.</p>
 需要注意的是 ? 块需要两次转义。
 比如想要输出下面的文本：
-
+```code
 </p>foo\bar</p>
+```
 使用:
 ```code
 p.
