@@ -252,7 +252,7 @@ ul
   li.last
     a(href='#') baz
 ``` 
-
+渲染为：
 ```html
 <ul>
   <li class="first"><a href="#">foo</a>
@@ -274,6 +274,7 @@ ul
     li: a(href='#') bar
     li.last: a(href='#') baz
 ``` 
+渲染为：
 ```html
 <ul>
   <li class="first"><a href="#">foo</a>
