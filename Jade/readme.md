@@ -1,3 +1,8 @@
+# Jade - 模板引擎
+Jade 是一个高性能的模板引擎，它深受Haml影响，它是用javascript实现的,并且可以供node使用.
+
+===
+
 # jade 语法
 
 行结束标志
