@@ -13,11 +13,11 @@ CRLF 和 CR 会在编译之前被转换为 LF
 
 标签就是一个简单的单词:
 
-```code
+```jade
 html
 ``` 
 转换为
-```code
+```html
 <html></html>
 ``` 
 标签 id:
@@ -26,7 +26,7 @@ html
 div#container
 ``` 
 转换为 
-```code
+```html
 <div id="container"></div>
 ``` 
 标签 class:
@@ -35,7 +35,7 @@ div#container
 div.user-details
 ``` 
 转换为 
-```code
+```html
 <div class="user-details"></div>
 ``` 
 多个 class,id? :
@@ -44,7 +44,7 @@ div.user-details
 div#foo.bar.baz
 ``` 
 转换为 
-```code
+```html
 <div id="foo" class="bar baz"></div>
 ``` 
 (div 默认标签，可以省略):
@@ -55,7 +55,7 @@ div#foo.bar.baz
 ``` 
 这个算是我们的语法糖，它已经被很好的支持了，上面的会输出：
 
-```code
+```html
 <div id="foo"></div><div class="bar"></div>
 ``` 
 标签文本
@@ -65,7 +65,7 @@ div#foo.bar.baz
 p wahoo!
 ``` 
 渲染为 
-```code
+```html
 <p>wahoo!</p>.
 ``` 
 
@@ -78,28 +78,29 @@ p
   | go jade go
 ``` 
 渲染为 
-```code
+```html
 <p>foo bar baz rawr.....</p>
 ``` 
 
 怎么和数据结合起来？ 
-所有类型的文本展示都可以和数据结合起来，如果我们把{ name: 'tj', email: 'tj@vision-media.ca' } 传给编译函数，下面是模板上的写法:
+所有类型的文本展示都可以和数据结合起来，
+如果我们把{ name: 'tj', email: 'tj@vision-media.ca' } 传给编译函数，下面是模板上的写法:
 ```code
 #user #{name} &lt;#{email}&gt;
 ```
 渲染为 
-```code
+```html
 <div id="user">tj &lt;tj@vision-media.ca&gt;</div>
 ``` 
 要输出#{} ,需要转义一下!
 ```code
 p \#{something}
 ``` 
-它会输出
-```code
+渲染为 
+```html
 <p>#{something}</p>
 ``` 
-同样可以使用非转义的变量!{html}, 下面的模板将直接输出一个script标签
+同样可以使用**非转义**的变量!{html}, 下面的模板将直接输出一个script标签
 ```code
 - var html = "<script></script>"
 | !{html}
@@ -136,8 +137,8 @@ label Username:
      asdf
     asd.
 ```
-会被渲染为:
-```code
+渲染为:
+```html
     <p>foo asdf
     asdf
       asdfasdfaf
@@ -151,12 +152,14 @@ label Username:
 p .
 ``` 
 渲染为:
-
+```html
 <p>.</p>
-需要注意的是 ? 块需要两次转义。
-比如想要输出下面的文本：
-```code
-</p>foo\bar</p>
+``` 
+需要注意的是 ? 块需要**两次转义**。
+
+要输出下面的文本：
+```html
+<p>foo\bar</p>
 ```
 使用:
 ```code
@@ -168,25 +171,25 @@ p.
 ### 单行注释
 
 通过"//"来开始，并且必须单独一行：
-```code
+```jade
 // just some paragraphs
 p foo
 p bar
 ``` 
 渲染为：
-```code
+```html
 <!-- just some paragraphs -->
 <p>foo</p>
 <p>bar</p>
 ``` 
 Jade 同样支持**不输出**的注释，加一个**短横线(//-)**就行了：
-```code
+```jade
 //- will not output within markup
 p foo
 p bar
 ``` 
 渲染为：
-```code
+```html
 <p>foo</p>
 <p>bar</p>
 ``` 
@@ -200,7 +203,7 @@ p bar
         h1 Example
 ``` 
 渲染为：
-```code
+```html
 <body>
   <!--
   <div id="content">
@@ -216,7 +219,7 @@ body
     a(href='http://www.mozilla.com/en-US/firefox/') Get Firefox
 ``` 
 渲染为：
-```code
+```html
 <body>
 <!-- if IE -->
 ????????????????????????????????????????????????????????????????
@@ -236,6 +239,10 @@ ul
   li.last
     a(href='#') baz
 ``` 
+
+```html
+?????????????????????????????
+```
 ## 块展开
 
 块展开可以帮助你在一行内创建嵌套的标签，下面的例子和上面的是一样的：
@@ -245,14 +252,20 @@ ul
     li: a(href='#') bar
     li.last: a(href='#') baz
 ``` 
+```html
+?????????????????????????????
+```
+
 ## 属性
 
 Jade 现在支持使用'(' 和 ')' 作为属性分隔符
-
+```code
 a(href='/login', title='View login page') Login
+```
 当一个值是 undefined 或者 null 属性不会被加上, 所以呢，它不会编译出 'something="null"'.
-
+```code
 div(something=null)
+``` 
 Boolean 属性也是支持的:
 ```code
 input(type="checkbox", checked)
@@ -306,7 +319,7 @@ html
     | <h1>Title</h1>
     | <p>foo bar baz</p>
 ``` 
-或者我们可以使用. 来告诉Jade我们需要一段文本：
+或者我们可以使用**.** 来告诉Jade我们需要一段文本：
 ```code
 html
   body.
@@ -314,10 +327,13 @@ html
     <p>foo bar baz</p>
 ``` 
 上面的两个例子都会渲染成相同的结果：
-```code
-<html><body><h1>Title</h1>
+```html
+<html>
+<body>
+<h1>Title</h1>
 <p>foo bar baz</p>
-</body></html>
+</body>
+</html>
 ``` 
 这条规则适应于在jade里的任何文本：
 ```code
@@ -414,7 +430,7 @@ Jade目前支持三种类型的可执行代码。第一种是前缀-， 这是�
 - else
   p oh no! didnt work
 ``` 
-哈哈，甚至是很长的循环也是可以的：
+甚至是很长的循环也是可以的：
 
 ```code
 - if (items.length)
@@ -492,14 +508,21 @@ obj = { foo: 'bar' }
 each val, key in obj
   li #{key}: #{val}
 ``` 
-将会渲染为：<li>foo: bar</li>
-
-Jade在内部会把这些语句转换成原生的JavaScript语句，就像使用 users.forEach(function(user){, 词法作用域和嵌套会像在普通的JavaScript中一样：
+将会渲染为：
+```html
+<li>foo: bar</li>
+``` 
+Jade在内部会把这些语句转换成原生的JavaScript语句，
+就像使用 users.forEach(function(user) **???**, 词法作用域和嵌套会像在普通的JavaScript中一样：
 
 ```code
 each user in users
   each role in user.roles
     li= role
+``` 
+
+```html
+????????????????????????????????????????
 ``` 
 如果你喜欢，也可以使用for ：
 
@@ -508,6 +531,11 @@ for user in users
   for role in user.roles
     li= role
 ``` 
+
+```html
+????????????????????????????????????????
+``` 
+
 ## 条件语句
 
 Jade 条件语句和使用了(-) 前缀的JavaScript语句是一致的,然后它允许你不使用圆括号，这样会看上去对设计师更友好一点， 同时要在心里记住这个表达式渲染出的是_常规_Javascript：
@@ -556,7 +584,8 @@ html
         p some footer content
 ```
 
-现在我们来继承这个布局，简单创建一个新文件，像下面那样直接使用extends，给定路径（可以选择带.jade扩展名或者不带）. 你可以定义一个或者更多的块来覆盖父级块内容, 注意到这里的foot块没有定义，所以它还会输出父级的"some footer content"。
+现在我们来继承这个布局，简单创建一个新文件，像下面那样直接使用extends，给定路径（可以选择带.jade扩展名或者不带）. 
+你可以定义一个或者更多的块来覆盖父级块内容, 注意到这里的foot块没有定义，所以它还会输出父级的"some footer content"。
 
 ```code
 extends extend-layout
@@ -585,7 +614,8 @@ block content
 ``` 
 ## 包含
 
-Includes 允许你静态包含一段Jade, 或者别的存放在单个文件中的东西比如css, html。 非常常见的例子是包含头部和页脚。 假设我们有一个下面目录结构的文件夹：
+Includes 允许你静态包含一段Jade, 或者别的存放在单个文件中的东西比如css, html。   
+非常常见的例子是包含头部和页脚。 假设我们有一个下面目录结构的文件夹：
 
 ```code
  ./layout.jade
@@ -595,7 +625,7 @@ Includes 允许你静态包含一段Jade, 或者别的存放在单个文件中�
 ``` 
 下面是 layout.jade 的内容:
 
-```code
+```jade
   html
     include includes/head  
     body
@@ -603,7 +633,9 @@ Includes 允许你静态包含一段Jade, 或者别的存放在单个文件中�
       p Welcome to my super amazing site.
       include includes/foot
 ```
-这两个包含 includes/head 和 includes/foot 都会读取相对于给 layout.jade 参数filename 的路径的文件, 这是一个绝对路径，不用担心Express帮你搞定这些了。Include 会解析这些文件，并且插入到已经生成的语法树中，然后渲染为你期待的内容：
+这两个包含 includes/head 和 includes/foot 都会读取相对于给 layout.jade 参数filename 的路径的文件, 
+这是一个绝对路径，不用担心Express帮你搞定这些了。  
+Include 会解析这些文件，并且插入到已经生成的语法树中，然后渲染为你期待的内容：  
 
 ```code
 <html>
@@ -621,14 +653,16 @@ Includes 允许你静态包含一段Jade, 或者别的存放在单个文件中�
   </body>
 </html>
 ``` 
-前面已经提到，include 可以包含比如html或者css这样的内容。给定一个扩展名后，Jade不会把这个文件当作一个Jade源代码，并且会把它当作一个普通文本包含进来：
+前面已经提到，include 可以包含比如html或者css这样的内容。给定一个扩展名后，Jade不会把这个文件当作一个Jade源代码，  
+并且会把它当作一个普通文本包含进来：
 
 ```code
 html
   body
     include content.html
 ``` 
-Include 也可以接受块内容，给定的块将会附加到包含文件 最后 的块里。 举个例子，head.jade 包含下面的内容：
+Include 也可以接受块内容，给定的块将会附加到包含文件最后的块里。   
+举个例子，head.jade 包含下面的内容：
 
 ```code
 head
@@ -676,7 +710,7 @@ Mixins 也可以带一个或者多个参数，参数就是普通的javascripts�
 ```
 会输出像下面的html：
 
-```code
+```html
 <div class="user">
   <h2>tj</h2>
   <ul class="pets">
@@ -779,7 +813,7 @@ clean:
 
 ## 命令行的jade(1)
 
-```code
+```sh
 使用: jade [options] [dir|file ...]
 
 选项:
