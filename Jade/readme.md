@@ -193,14 +193,14 @@ p bar
 <p>foo</p>
 <p>bar</p>
 ``` 
-### 块注释
+### 块注释(注释+嵌套)
 
-块注释也是支持的：
+块注释(注释+嵌套)：
 ```code
-  body
-    //
-      #content
-        h1 Example
+body
+  //
+    #content
+      h1 Example
 ``` 
 渲染为：
 ```html
@@ -240,7 +240,7 @@ body
 </body>
 ``` 
 
-## 内联
+## 嵌套(内联)
 
 Jade 支持以自然的方式定义标签嵌套:
 ```code
@@ -254,11 +254,19 @@ ul
 ``` 
 
 ```html
-?????????????????????????????
+<ul>
+  <li class="first"><a href="#">foo</a>
+  </li>
+  <li><a href="#">bar</a>
+  </li>
+  <li class="last"><a href="#">baz</a>
+  </li>
+</ul>
 ```
-## 块展开
+## 块扩展 **:**
 
-块展开可以帮助你在一行内创建嵌套的标签，下面的例子和上面的是一样的：
+（**冒号**）块扩展是一种使用单行的书写方式来实现嵌套标签的功能。更容易
+
 ```code
   ul
     li.first: a(href='#') foo
@@ -266,7 +274,14 @@ ul
     li.last: a(href='#') baz
 ``` 
 ```html
-?????????????????????????????
+<ul>
+  <li class="first"><a href="#">foo</a>
+  </li>
+  <li><a href="#">bar</a>
+  </li>
+  <li class="last"><a href="#">baz</a>
+  </li>
+</ul>
 ```
 
 ## 属性
