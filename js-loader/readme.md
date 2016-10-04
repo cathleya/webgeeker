@@ -6,10 +6,10 @@
 ## [ES6 import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
 ## 20. CMD 安装 npm install --save-dev gulp-uglify 
-## new: CMD 安装 npm install --save-dev require 
+## new: CMD 安装 npm install --save-dev requirejs
 ```sh
 	$ npm install --save-dev gulp-uglify
-	$ npm install --save-dev require 
+	$ npm install --save-dev requirejs
 ``` 
 ### [how-to-include-a-javascript-file-in-another-javascript-file](http://stackoverflow.com/questions/950087/how-to-include-a-javascript-file-in-another-javascript-file/39854041#39854041)
 
