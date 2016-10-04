@@ -13,10 +13,15 @@ $ npm install webpack-dev-server -g
 
 ### step0: 根目录下, **创建文件** src/*  => /builds/development/* && /builds/production/*
 
+#### 使用*通配符
+> 编译所有sass/\*.scss到css/目录
+> 编译所有js/ts/isx/\*.js/\*.ts/\*.jsx到js/目录
+> 编译所有template/\*.jade到html/目录
+
 ```sh
 ./src/js/main.js (./src/ts/main.ts)  
 ./src/js/app.jsx (./src/jsx/app.jsx)  
-./src/sass/common.scss  
+./src/sass/common.scss (./src/sass/no-need/var.scss 不需要编译到css目录，使用*通配符)
 ./src/template/index.jade  
 ``` 
 
@@ -314,7 +319,7 @@ export default App;
 ```sh
 $ npm install --save-dev gulp gulp-jade 
 ``` 
-### 编辑 gulpfile.js
+### 编辑 gulpfile.js (使用*通配符)
 
 ```js
 var	gulp = require('gulp'),
@@ -375,12 +380,12 @@ $ gulp jade
 ```sh
 npm install --save-dev gulp-browserify
 ```  
-### 编辑 gulpfile.js
+### 编辑 gulpfile.js (使用*通配符)
 ```js
 browserify = require('gulp-browserify');
 
 gulp.task('js',function(){
-		return gulp.src('src/js/main.js')
+		return gulp.src('src/js/*.js')
 			.pipe(browserify({ debug: true}))
 			.pipe(gulp.dest('builds/development/js'));
 	});
@@ -391,18 +396,45 @@ gulp.task('js',function(){
 $ gulp js
 ``` 
 
+## new: CMD 安装 npm install --save-dev require 
+```sh
+	$ npm install --save-dev gulp-uglify
+	$ npm install --save-dev require 
+``` 
+### [how-to-include-a-javascript-file-in-another-javascript-file](http://stackoverflow.com/questions/950087/how-to-include-a-javascript-file-in-another-javascript-file/39854041#39854041)
+
+### [REQUIREJS IN NODE](http://requirejs.org/docs/node.html#3)  
+sub.js (module.exports)
+```js
+module.exports = {
+  log: function(string) {
+    if(console) console.log(string);
+  }
+  mylog: function(){
+    console.log('just for log test!');
+  }
+}
+``` 
+main.js (Usage)
+```sh
+var mylog =require('./sub');
+
+mylog.log('Hurray, it works! :)');
+mylog.mylog();
+``` 
+
 
 ### step12: 安装 gulp-uglify
 ```sh
 $ npm install --save-dev gulp-uglify
 ``` 
 
-### 编辑 gulpfile.js
+### 编辑 gulpfile.js (使用*通配符)
 ```sh
 uglify= require('gulp-uglify');
 
 gulp.task('js',function(){
-		return gulp.src('src/js/main.js')
+		return gulp.src('src/js/*.js')
 			.pipe(browserify({ debug: true}))
 			.pipe(uglify())
 			.pipe(gulp.dest('builds/development/js'));
@@ -414,7 +446,7 @@ gulp.task('js',function(){
 $ gulp js
 ``` 
 
-### step13: 安装 gulp-if 
+### step13: 安装 gulp-if  (使用*通配符)
 
 ```sh
 $ npm install --save-dev gulp-if 
@@ -426,7 +458,7 @@ gulpif= require('gulp-if');
 var env = process.env.NODE_ENV;
 
 gulp.task('js',function(){
-		return gulp.src('src/js/main.js')
+		return gulp.src('src/js/*.js')
 			.pipe(browserify({ debug: env === 'development'}))
 			.pipe(gulpif(env === 'production', uglify()))
 			.pipe(gulp.dest('builds/development/js'));
@@ -451,4 +483,23 @@ $ NODE_ENV=production gulp js
 	var env = process.env.NODE_ENV || 'development';
 ``` 
 
+## 15. 安装  gulp-sass (使用*通配符)
+```sh
+$ npm install --save-dev gulp-sass  
+``` 
 
+### 编辑 gulpfile.js
+```sh
+sass= require('gulp-sass');
+
+gulp.task('sass',function(){
+	return gulp.src('src/sass/*.scss')
+		.pipe(sass({ sourceComments: 'map'}))
+		.pipe(gulp.dest('builds/development/css'));
+});
+``` 
+
+### CMD 运行 gulp sass
+```sh
+$ gulp sass
+``` 
