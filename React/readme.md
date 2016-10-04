@@ -11,15 +11,19 @@ $ npm install webpack -g
 $ npm install webpack-dev-server -g
 ``` 
 
-### step0: 根目录下, 创建文件 src/   => /builds/development && /builds/production
+### step0: 根目录下, **创建文件** src/*  => /builds/development/* && /builds/production/*
 
+```sh
 ./src/js/main.js(./src/ts/main.ts)  
-./src/js/app.jsx(./src/jsx/main.jsx)  
+./src/js/app.jsx(./src/jsx/app.jsx)  
 ./src/sass/common.scss  
 ./src/template/index.jade  
+``` 
 
+### 
 ```code
 ./builds/development/js/main.js  
+./builds/development/js/app.js   
 ./builds/development/css/common.css  
 ./builds/development/index.html  
 ``` 
