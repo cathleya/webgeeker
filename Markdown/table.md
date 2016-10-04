@@ -10,11 +10,10 @@
 | be         |      be      |           be|
 | left       |     center   |        right|
 | aligned    |    aligned   |      aligned|
-``` 
-
+```
 
 > 
-| Left align | Center align |
+| 参数 | 作用解释 |
 |:-----------|:------------|
 | entry:     | 指定打包的入口文件 main.js。| 
 | output：   | 配置打包结果，path定义了输出的文件夹，filename则定义了打包结果文件的名称。| 
