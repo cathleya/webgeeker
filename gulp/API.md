@@ -11,7 +11,7 @@
 根据匹配的glob或者globs数组,来导出文件。
 返回一个[Vinyl files](https://github.com/gulpjs/vinyl-fs)类型的[stream](http://nodejs.org/api/stream.html)
 它能被[piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
-到插件.
+到插件上.
 
 ```javascript
 gulp.src('client/templates/*.jade')
