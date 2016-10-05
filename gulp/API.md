@@ -20,47 +20,47 @@ gulp.src('client/templates/*.jade')
   .pipe(gulp.dest('build/minified_templates'));
 ```
 
-#### globs
-Type: `String` or `Array`
+#### [globs](https://en.wikipedia.org/wiki/Glob_(programming))
+类型: `String` or `Array`
 
 Glob or array of globs to read. Globs use [node-glob syntax] except that negation is fully supported.
 
-A glob that begins with `!` excludes matching files from the glob results up to that point. For example, consider this directory structure:
+A glob that begins with `!` excludes matching files from the glob results up to that point. 例如，考虑这个目录结构：
 
     client/
       a.js
       bob.js
       bad.js
 
-The following expression matches `a.js` and `bad.js`:
+下面的表达式匹配 `a.js` 和 `bad.js`:
 
     gulp.src(['client/*.js', '!client/b*.js', 'client/bad.js'])
 
 
 #### options
-Type: `Object`
+类型: `Object`
 
 Options to pass to [node-glob] through [glob-stream].
 
-gulp supports all [options supported by node-glob][node-glob documentation] and [glob-stream] except `ignore` and adds the following options.
+gulp支持所有 [options supported by node-glob][node-glob documentation] 和 [glob-stream] 除了`ignore` 且,增加了以下的选项。
 
 ##### options.buffer
-Type: `Boolean`
-Default: `true`
+类型: `Boolean`
+默认: `true`
 
-Setting this to `false` will return `file.contents` as a stream and not buffer files. This is useful when working with large files. **Note:** Plugins might not implement support for streams.
+把它设置成 `false` 会作为一个流返回 `file.contents`  且,不缓存文件. 当使用大文件时，这是非常有用的. **注意:** 插件可能无法实现对流的支持.
 
 ##### options.read
-Type: `Boolean`
-Default: `true`
+类型: `Boolean`
+默认: `true`
 
 Setting this to `false` will return `file.contents` as null and not read the file at all.
 
 ##### options.base
-Type: `String`
-Default: everything before a glob starts (see [glob2base])
+类型: `String`
+默认: everything before a glob starts (see [glob2base])
 
-E.g., consider `somefile.js` in `client/js/somedir`:
+例如., consider `somefile.js` in `client/js/somedir`:
 
 ```js
 gulp.src('client/js/**/*.js') // Matches 'client/js/somedir/somefile.js' and resolves `base` to `client/js/`
