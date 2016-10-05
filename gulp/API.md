@@ -1,6 +1,6 @@
-## gulp API docs
+## gulp API 文档
 
-Jump to:
+跳转到(锚点\[\]\(\#id\)):
   [gulp.src](#gulpsrcglobs-options) |
   [gulp.dest](#gulpdestpath-options) |
   [gulp.task](#gulptaskname--deps--fn) |
@@ -8,7 +8,7 @@ Jump to:
 
 ### gulp.src(globs[, options])
 
-根据匹配的glob或者globs数组,来输出文件。
+根据匹配的glob或者globs数组,来导出文件。
 返回一个[Vinyl files](https://github.com/gulpjs/vinyl-fs)类型的[stream](http://nodejs.org/api/stream.html)
 它能被[piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
 到插件.
