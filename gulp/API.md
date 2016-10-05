@@ -8,10 +8,10 @@ Jump to:
 
 ### gulp.src(globs[, options])
 
-Emits files matching provided glob or an array of globs.
-Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/gulpjs/vinyl-fs)
-that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
-to plugins.
+根据匹配的glob或者globs数组,来输出文件。
+返回一个[Vinyl files](https://github.com/gulpjs/vinyl-fs)类型的[stream](http://nodejs.org/api/stream.html)
+它能被[piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
+到插件.
 
 ```javascript
 gulp.src('client/templates/*.jade')
