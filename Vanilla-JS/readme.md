@@ -21,8 +21,8 @@ To use Vanilla JS, just put the following code anywhere in your application's HT
 When you're ready to move your application to a production deployment, switch to the much faster method:
 
  
-That's right - no code at all.  
-Vanilla JS is so popular that browsers have been automatically loading it for over a decade.
+> # That's right - no code at all.  (你没看错！没有任何代码，Vanilla JS 太流行了，所有的浏览器在十年前就已经内置了它。) 
+> Vanilla JS is so popular that browsers have been automatically loading it for over a decade.
 
 ## Speed Comparison 
 Here are a few examples of just how fast Vanilla JS really is:
