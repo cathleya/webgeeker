@@ -1,13 +1,13 @@
 #  Vanilla JS 
 
-Vanilla JS is a fast, lightweight, cross-platform framework for building incredible, powerful JavaScript applications.
+> Vanilla JS is a fast, lightweight, cross-platform framework for building incredible, powerful JavaScript applications.
 
 [http://vanilla-js.com/](http://vanilla-js.com/)  
 
 ![logo](http://vanilla-js.com/assets/button.png)
 
 
-Getting Started
+## Getting Started
 The Vanilla JS team takes pride in the fact that it is the most lightweight framework available anywhere; 
 using our production-quality deployment strategy,  
 your users' browsers will have Vanilla JS loaded into memory before it even requests your site.
@@ -21,13 +21,14 @@ To use Vanilla JS, just put the following code anywhere in your application's HT
 When you're ready to move your application to a production deployment, switch to the much faster method:
 
  
-That's right - no code at all. Vanilla JS is so popular that browsers have been automatically loading it for over a decade.
+That's right - no code at all.  
+Vanilla JS is so popular that browsers have been automatically loading it for over a decade.
 
-Speed Comparison
+## Speed Comparison 
 Here are a few examples of just how fast Vanilla JS really is:
 
-Retrieve DOM element by ID
-Code	ops / sec
+> Retrieve DOM element by ID  
+* Code	ops / sec 
 Vanilla JS	document.getElementById('test-table');	
 12,137,211
  
@@ -49,8 +50,8 @@ YUI	YAHOO.util.Dom.get('test-table');
 MooTools	document.id('test-table');	
 78,802
  
-Retrieve DOM elements by tag name
-Code	ops / sec
+## Retrieve DOM elements by tag name 
+* Code	ops / sec 
 Vanilla JS	document.getElementsByTagName("span");	
 8,280,893
  
@@ -72,8 +73,8 @@ Dojo	dojo.query('span');
 MooTools	Slick.search(document, 'span', new Elements);	
 5,457
  
-Code Examples
-Here are some examples of common tasks in Vanilla JS and other frameworks:
+# Code Examples 
+* Here are some examples of common tasks in Vanilla JS and other frameworks:
 
 > Fade an element out and then remove it 
 
