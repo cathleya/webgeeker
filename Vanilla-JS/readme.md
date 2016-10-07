@@ -4,15 +4,20 @@ Vanilla JS is a fast, lightweight, cross-platform framework for building incredi
 
 [http://vanilla-js.com/](http://vanilla-js.com/)  
 
-
+![logo](http://vanilla-js.com/assets/button.png)
 
 
 Getting Started
-The Vanilla JS team takes pride in the fact that it is the most lightweight framework available anywhere; using our production-quality deployment strategy, your users' browsers will have Vanilla JS loaded into memory before it even requests your site.
+The Vanilla JS team takes pride in the fact that it is the most lightweight framework available anywhere; 
+using our production-quality deployment strategy,  
+your users' browsers will have Vanilla JS loaded into memory before it even requests your site.
 
 To use Vanilla JS, just put the following code anywhere in your application's HTML:
 
+```code
 <script src="path/to/vanilla.js"></script>
+``` 
+
 When you're ready to move your application to a production deployment, switch to the much faster method:
 
  
@@ -70,23 +75,39 @@ MooTools	Slick.search(document, 'span', new Elements);
 Code Examples
 Here are some examples of common tasks in Vanilla JS and other frameworks:
 
-Fade an element out and then remove it
-Vanilla JS	var s = document.getElementById('thing').style;
+> Fade an element out and then remove it 
+
+## Vanilla JS	
+```js
+var s = document.getElementById('thing').style;
 s.opacity = 1;
 (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,40)})();
-jQuery	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+``` 
+
+## jQuery	
+```js
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>
 $('#thing').fadeOut();
 </script>
-Make an AJAX call
-Vanilla JS	var r = new XMLHttpRequest();
+``` 
+
+> Make an AJAX call
+
+## Vanilla JS	
+```js
+var r = new XMLHttpRequest();
 r.open("POST", "path/to/api", true);
 r.onreadystatechange = function () {
   if (r.readyState != 4 || r.status != 200) return;
   alert("Success: " + r.responseText);
 };
 r.send("banana=yellow");
-jQuery	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+```
+
+## jQuery	
+```js
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>
 $.ajax({
   type: 'POST',
@@ -97,6 +118,8 @@ $.ajax({
   },
 });
 </script>
+``` 
+
 Further Reading
 For more information about Vanilla JS:
 
