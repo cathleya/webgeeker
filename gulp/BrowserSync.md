@@ -33,3 +33,45 @@ gulp.task('browser-sync', function () {
 ``` 
 
 
+```js
+var gulp = require('gulp'),
+    jade = require('gulp-jade'),
+    browserify = require('gulp-browserify'),
+    uglify= require('gulp-uglify'),
+    gulpif= require('gulp-if'),
+    sass= require('gulp-sass'),
+    browserSync = require('browser-sync'),
+    connect= require('gulp-connect');
+    
+    
+//watcher of html and all files
+gulp.task('browser-sync', function () {
+   var files = [
+      'builds/html/**/*.html',
+      'builds/css/**/*.css',
+      'builds/assets/images/**/*.jpg',
+      'builds/js/**/*.js'
+   ];
+
+   browserSync.init(files, {
+      server: {
+         baseDir: './builds'
+      }
+   });
+});
+
+
+gulp.task('watch',function(){
+    gulp.watch('src/template/**/*.jade',['jade']);
+    gulp.watch('src/js/**/*.js',['js']);
+    gulp.watch('src/sass/**/*.scss',['sass']);
+    gulp.watch('src/html/*.html',['browser-sync']);
+});
+
+gulp.task('default',['js','sass','jade','browser-sync','watch','connect']);
+``` 
+
+
+
+
+
