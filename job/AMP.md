@@ -15,6 +15,10 @@ https://www.ampproject.org/zh_cn/docs/get_started/create/basic_markup
 
 [Web Fundamentals](https://developers.google.com/web/fundamentals/)
 
+
+
+[Follow best practices](https://developers.google.com/web/#follow-best-practices)
+
 https://www.npmjs.com/package/browser-sync
 
 
