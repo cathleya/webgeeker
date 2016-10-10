@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- http://www.zhangxinxu.com/wordpress/2010/05/css-border%E4%B8%89%E8%A7%92%E3%80%81%E5%9C%86%E8%A7%92%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/ -->
+	<style>
+		.test1{width:0; height:0; border-width:20px 10px; border-style:solid; border-color:#ff3300 #ffffff #ffffff #ffffff;}
+		.test2{width:0; height:0; border-width:10px 15px; border-style:solid; border-color:#ff3300 #ff3300 #ffffff #ffffff;}
+		.test3{width:0; height:0; border:10px solid; border-color:#ff3300 #ffffff #ffffff #ffffff;}
+		.test0{
+			width: 300px; 
+			height: 50px; 
+			border-radius: 15px;
+			background-color:#ff3300;
+			margin-left: -50px;
+			margin-top: 10px;
+			padding: 10px;
+		}
+		.cb{
+			position: absolute;
+			width: auto;
+			height:auto;
+			top:200px;
+			left:300px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>直角 三角形 border-width: 0 0 10px 20px;</h1>
+		<h2>等腰 三角 border-width: 0 0 10px 10px;</h2>
+		<h3>气泡对话框！</h3>
+	</div>
+	<div class="box">
+		<div class="test1">
+			<span>i</span>
+		</div>
+		<div class="test2">
+			<span>i</span>
+		</div>
+		<div class="test3">
+			<span>i</span>
+		</div>
+	</div>
+	<div class="cb">
+		<div class="box">
+			<div class="test0">
+				<span>this is a bubble dialog box!</span><br>
+				<i>气泡对话框！</i>
+			</div>
+			<div class="test2">
+				<span>i</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
