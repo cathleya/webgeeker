@@ -111,44 +111,7 @@ body{
 .wc .ag i{
 	color: #000;
 }
-.h-box{
-	width: 100%;
-	height: 167px;
-	/*height: 167px/?%*/
-	/*border: 3px solid red;*/
-	background-color: rgba(240,240,242,0.7);
-	position: relative;
-	box-shadow: 0 5px 5px #000;
-}
-.h-box .dh{
-	font-weight: bold;
-	font-size: 3rem;
-	position: absolute;
-	color: #000;
-	left:50%;
-	top:50%;
-	transform: translate(-100px,-25px);
-}
-.h-box .qr{
-	width: 167px;
-	height: 167px;
-	background-color: #32B16C;
-	color: #fff;
-	position: absolute;
-	/*left:83%;*/
-	right:0;
-}
-.h-box .qr span{
-	font-size:2rem;
-	text-decoration: none;
-	display: inline-block;
-	padding: 60px 15px;
-}
-.h-box a{
-	text-decoration: none;
-	cursor: pointer;
-	color: #fff !important;
-}
+
 /*.h-box .qr a{
 	text-decoration: none;
 	cursor: pointer;

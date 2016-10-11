@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>meetingDetail</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="./meetingDetial.css">
+</head>
+<style>
+	.h-box{
+		width: 100%;
+		height: 167px;
+		/*height: 167px/?%*/
+		/*border: 3px solid red;*/
+		background-color: rgba(240,240,242,0.7);
+		position: relative;
+		box-shadow: 0 5px 5px #000;
+	}
+	.h-box .dh{
+		font-weight: bold;
+		font-size: 3rem;
+		position: absolute;
+		color: #000;
+		left:50%;
+		top:50%;
+		transform: translate(-100px,-25px);
+	}
+	.h-box .qr{
+		width: 167px;
+		height: 167px;
+		background-color: #32B16C;
+		color: #fff;
+		position: absolute;
+		/*left:83%;*/
+		left:0;
+	}
+	.h-box .qr span{
+		font-size:2rem;
+		text-decoration: none;
+		display: inline-block;
+		padding: 60px 15px;
+	}
+	.h-box a{
+		text-decoration: none;
+		cursor: pointer;
+		color: #fff !important;
+	}
+</style>
+<body>
+	<div class="h-box">
+		<div class="dh">我的签到</div>
+		<a href="#">
+			<div class="qr">
+				<span><i class="fa fa-arrow-left" aria-hidden="true"></i>返回</span>
+			</div>
+		</a>
+	</div>
+	<div class="box">
+		<!--  -->
+	</div>
+	<div class="box">
+		<div class="wa">
+			<span class="s1">
+				已签到
+			</span>
+		</div>
+		<div class="wb"></div>
+		<div class="wc"></div>
+	</div>
+	<div class="box">
+		<!--  -->
+	</div>
+</body>
+</html>
