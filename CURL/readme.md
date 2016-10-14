@@ -2,10 +2,23 @@
 
 > 
 cURL (/kɝl/ or /kə:l/) is a computer software project providing a library and command-line tool for transferring data using various protocols.   
+
 The cURL project produces two products, **libcurl** and **cURL**.   
+
 It was first released in 1997. The name originally stood for "**see URL**".  
 
 [wiki](https://en.wikipedia.org/wiki/CURL)
+
+## cURL
+A command line tool for getting or sending files using URL syntax.  
+一个使用URL语法的命令行工具用于获取文件或发送文件. 
+
+
+## libcurl
+libcurl is a free client-side URL transfer library,  
+supporting FTP, FTPS, Gopher, HTTP (with HTTP/2 support), HTTPS, SCP, SFTP, TFTP, Telnet, DICT, the file URI scheme, LDAP, LDAPS, IMAP, POP3, SMTP and RTSP.
+libcurl 是一个自由的客户端URL传输库，支持多种应用层传输协议！如：FTP, FTPS,HTTP (with HTTP/2 support), HTTPS, SFTP, TFTP, Telnet,IMAP, POP3, SMTP, the file URI scheme 等！
+
 
 > ## curl help
 
