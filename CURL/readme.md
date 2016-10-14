@@ -16,7 +16,7 @@ A command line tool for getting or sending files using URL syntax.
 
 ## libcurl
 libcurl is a free client-side URL transfer library,  
-supporting FTP, FTPS, Gopher, HTTP (with HTTP/2 support), HTTPS, SCP, SFTP, TFTP, Telnet, DICT, the file URI scheme, LDAP, LDAPS, IMAP, POP3, SMTP and RTSP.
+supporting FTP, FTPS, Gopher, HTTP (with HTTP/2 support), HTTPS, SCP, SFTP, TFTP, Telnet, DICT, the file URI scheme, LDAP, LDAPS, IMAP, POP3, SMTP and RTSP.  
 libcurl 是一个自由的客户端URL传输库，支持多种应用层传输协议！如：FTP, FTPS,HTTP (with HTTP/2 support), HTTPS, SFTP, TFTP, Telnet,IMAP, POP3, SMTP, the file URI scheme 等！
 
 
