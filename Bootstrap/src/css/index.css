@@ -1,0 +1,22 @@
+@import url(./parts/header.css);
+@import url(./parts/main.css);
+@import url(./parts/footer.css);
+
+main .list-group i{
+    margin-right: 10px;
+}
+
+header nav .navbar-header a{
+    color: #0f0 !important;
+    background: #fff;
+    border-radius: 10px;
+}
+
+header nav .navbar-header a:hover{
+    color: #f0f !important;
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+}
