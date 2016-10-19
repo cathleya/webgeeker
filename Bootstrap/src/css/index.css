@@ -20,3 +20,7 @@ header nav .navbar-header a:hover{
     -webkit-transition: all 1s ease-out 0s;
     transition: all 1s ease-out 0s;
 }
+/*header nav .navbar .nav ul li a{
+    margin-right: 10px !important;
+    background: #0f0 !important;
+}*/

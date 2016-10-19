@@ -18,7 +18,8 @@ flask 烧瓶
 flag
 cloud
 code
-cogs
+cog 齿轮
+cogs 齿轮s
 commenting
 database
 calendar
@@ -27,5 +28,10 @@ binoculars 双筒望远镜
 bar-chart 条形图
 anchor 锚
 diamond 钻石
-
+book
+university
+user-secret 
+universal-access
+github-alt
+wrench 扳手
 ```
