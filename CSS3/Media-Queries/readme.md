@@ -37,6 +37,22 @@ W3C Recommendation 19 June 2012
 <link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css">
 <link rel="stylesheet" type="text/css" media="all and (min-width:500px)" href="serif.css">
 <link rel="stylesheet" type="text/css" media="screen and (color), projection and (min-width:500px)" href="serif.css">
+
+> 在XHTML，这可以写为：
+
+<link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css" />
+<link rel="stylesheet" type="text/css" media="all and (min-width:500px)" href="serif.css" />
+<link rel="stylesheet" type="text/css" media="screen and (color), projection and (min-width:500px)" href="serif.css" />
+
+# 在XML，这可以写为：
+
+<?xml-stylesheet media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" ?>
+
+# 用 import (no need media)，这可以写为：
+
+@import url(example.css) screen and (color), projection and (color);
+
+
 ```
 
 ## media types ?
@@ -91,6 +107,9 @@ The ‘print’ and ‘screen’ media types are defined in HTML4.
 ```
 
 ## media feature (?)
+
+### max/min (prefix) optional
+
 > Media features
 
 4.1. width  
