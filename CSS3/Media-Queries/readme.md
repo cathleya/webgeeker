@@ -92,20 +92,20 @@ The ‘print’ and ‘screen’ media types are defined in HTML4.
 
 ## media feature (?)
 
-Media features
-4.1. width
-4.2. height
-4.3. device-width
-4.4. device-height
-4.5. orientation
-4.6. aspect-ratio
-4.7. device-aspect-ratio
-4.8. color
-4.9. color-index
-4.10. monochrome
-4.11. resolution
-4.12. scan
-4.13. grid
+> Media features  
+4.1. width  
+4.2. height  
+4.3. device-width  
+4.4. device-height  
+4.5. orientation  
+4.6. aspect-ratio   
+4.7. device-aspect-ratio  
+4.8. color  
+4.9. color-index  
+4.10. monochrome 
+4.11. resolution  
+4.12. scan  
+4.13. grid  
 
 ```code
 # (color)
