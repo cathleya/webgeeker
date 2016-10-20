@@ -64,6 +64,13 @@
             background: rgba(0,0,0,0.7) !important;
             color: #0f0 !important;
         }
+        .mark{
+            color: #ff0 !important;
+            background: rgba(255,255,255,1) !important;
+            border-radius: 10px;
+            border: 3px solid #0f0;
+            /*box-sizing: border-box;*/
+        }
     </style>
 </head>
 <body>
@@ -72,6 +79,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <h1>Bootstrap with CDN</h1>
+                    <p>
+                        The Bootstrap 3 grid system has four tiers of classes: <br>
+                        <mark> xs (phones), sm (tablets), md (desktops), and lg (larger desktops).</mark>
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -176,6 +187,153 @@
                     <p>
                         col-md-6
                     </p>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span>col-xs-12</span>
+                </div>
+                <div class="col-xs-9 col-md-6">
+                    <span>col-xs-9 col-md-6</span>
+                </div>
+                <div class="col-xs-3 col-md-6">
+                    <span>col-xs-3 col-md-6</span>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <span>col-xs-12 col-md-6</span>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <span>col-xs-6 col-md-6</span>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <span>col-xs-6 col-md-6</span>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <span>col-xs-6 col-md-6</span>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8">col-xs-12 col-sm-6 col-md-8</div>
+                <div class="col-xs-6 col-md-4">col-xs-6 col-md-4</div>
+                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-4">col-xs-6 col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">col-xs-6 col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">col-xs-6 col-sm-4</div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    col-sm-9
+                    <div class="row">
+                        <div class="col-sm-4">col-sm-4</div>
+                        <div class="col-sm-4 col-sm-offset-1">col-sm-4 col-sm-offset-1</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    col-sm-3
+                </div>
+                <div class="col-sm-9">
+                    <div class="row">
+                        can not fullfill the col-sm-9 < (col-sm-5 * 2) ???
+                        <mark>because the new row is 12 cols(9 == 12)</mark>
+                        <div class="col-sm-5">col-sm-5</div>
+                        <div class="col-sm-5">col-sm-5</div>
+                    </div>
+                    <div class="row">
+                        col-sm-6 + col-sm-6 === 12(col-sm-9)
+                        <div class="col-sm-6">col-sm-6</div>
+                        <div class="col-sm-6">col-sm-6</div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    col-sm-9
+                    <div class="row">
+                        <div class="col-sm-4">col-sm-4</div>
+                        <div class="col-sm-4 col-sm-offset-0">col-sm-4 col-sm-offset-0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3 col-md-push-9">.col-md-3 .col-md-pull-9</div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-xs-3 col-xs-push-9 col-md-3 col-md-push-9">col-md-3 col-md-push-9 .col-xs-3 .col-xs-push-9</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>h1. Bootstrap heading<small>Secondary text</small></h1>
+                    <h2>h2 <small>Secondary text</small></h2>
+                    <h3>h3 <small>Secondary text</small></h3>
+                    <h4>h4 <small>Secondary text</small></h4>
+                    <h5>h5 <small>Secondary text</small></h5>
+                    <h6>h6 <small>Secondary text</small></h6>
+                    <p>
+                        .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.
+                    </p>
+                    <p>
+                        <span class="h1">span.h1</span>
+                        <span class="h2">span.h2</span>
+                        <span class="h3">span.h3</span>
+                        <span class="h4">span.h4</span>
+                        <span class="h5">span.h5</span>
+                        <span class="h6">span.h6</span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        Bootstrap 将全局 font-size 设置为 14px，line-height 设置为 1.428。<br>
+                        这些属性直接赋予 &lt;body&gt; 元素和所有段落元素。<br>
+                        另外，&lt;p&gt; （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p>通过添加 .lead 类可以让段落突出显示。</p>
+                    <p class="lead">通过添加 <mark>.lead</mark> 类可以让段落突出显示。</p>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        <span class="h1">修改 <strong class="mark">link/ @import</strong> 的css, mark yellow color ? commit bugs github repo</span><br>
+                        You can use the mark tag to <mark>highlight</mark> text.
+                    </p>
+                    <del>This line of text is meant to be treated as deleted text.</del>
+                    <s>This line of text is meant to be treated as no longer accurate.</s>
                 </div>
             </div>
         </section>

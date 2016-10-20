@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html lang="zh-Hant">
+<!-- <html lang="ru"> -->
+<head>
+    <meta charset="UTF-8">
+    <title> Quotes Property</title>
+    <style>
+        q{
+            /*quotes: '\00AB' '\00BB' '\201E' '\201C';*/
+            quotes: "“" "”" "‘" "’";
+        }
+        .box{
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+        blockquote{
+            color: #cc3f85;
+        }
+        blockquote::before{
+            content: open-quote;
+        }
+        blockquote::after{
+            content: close-quote;
+        }
+        :lang(en) q {
+            quotes: "“" "”" "‘" "’";
+        }
+        :lang(en) blockquote {
+            quotes: "“" "”" "‘" "’";
+        }
+        :lang(ru) q{
+            quotes: "«" "»" "„" "“";
+        }
+        :lang(ru) blockquote {
+            quotes: "«" "»" "„" "“";
+        }
+        :lang(zh-Hant) q {
+            quotes: "「" "」" "『" "』";
+        }        
+        :lang(zh-Hant) blockquote {
+            quotes: "「" "」" "『" "』";
+        }
+        :lang(zh-Hans) q {
+            quotes: "“" "”" "‘" "’";
+        }
+        :lang(zh-Hans) blockquote {
+            quotes: "“" "”" "‘" "’";
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1> Quotes Property </h1>
+        <a href="https://www.sitepoint.com/premium/screencasts/atoz-css-the-css-quotes-property">AtoZ-css-the-css-quotes-property</a>
+        <p><mark>&lsquo; Quotes Property &rsquo;</mark></p>
+        <p><mark>&ldquo; Quotes Property &rdquo;</mark></p>
+        <pre>
+            &amp;lsquo;
+            &amp;rsquo;
+            &amp;ldquo;
+            &amp;rdquo;
+        </pre>
+    </div>
+    <a href="https://en.wikipedia.org/wiki/Quotation_mark">https://en.wikipedia.org/wiki/Quotation_mark</a><br>
+    <a href="http://www.ietf.org/rfc/rfc4646.txt">http://www.ietf.org/rfc/rfc4646.txt</a><br>
+    <a href="https://www.w3.org/International/questions/qa-html-language-declarations">https://www.w3.org/International/questions/qa-html-language-declarations</a><br>
+    <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a><br>
+    <div>
+        <p>
+            <q>this is a q paragraph, which has the browser default quotes style</q>
+        </p>
+    </div>
+    <div>
+        <blockquote>
+            this is a blockquote paragraph, which can use the customize setting quotes style
+        </blockquote>
+    </div>
+</body>
+</html>
