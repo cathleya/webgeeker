@@ -40,44 +40,45 @@ W3C Recommendation 19 June 2012
 ```
 
 ## media types ?
-The ‘print’ and ‘screen’ media types are defined in HTML4.
+The ‘print’ and ‘screen’ media types are defined in HTML4.  
 打印”和“屏幕”媒体类型在HTML4定义。
 
- The complete list of media types in HTML4 is: ‘aural’, ‘braille’, ‘handheld’, ‘print’, ‘projection’, ‘screen’, ‘tty’, ‘tv’.
+ The complete list of media types in HTML4 is: ‘aural’, ‘braille’, ‘handheld’, ‘print’, ‘projection’, ‘screen’, ‘tty’, ‘tv’.  
  在HTML4媒体类型的完整列表是：“听觉”，“点字/盲文”，“手持式”，“打印”，“投影”，“屏幕”，“TTY”，“电视”.
 
- CSS2 defines the same list, deprecates ‘aural’ and adds ‘embossed’ and ‘speech’. Also, ‘all’ is used to indicate that the style sheet applies to all media types.
- CSS2定义了相同的列表中，弃用“听觉”，并增加了“浮雕/压花”和“讲话/语音”。此外，“全部”被用来指示该样式表适用于所有介质类型。 
+ CSS2 defines the same list, deprecates ‘aural’ and adds ‘embossed’ and ‘speech’. Also, ‘all’ is used to indicate that the style sheet applies to all media types.  
+ CSS2定义了相同的列表中，弃用“听觉”，并增加了“浮雕/压花”和“讲话/语音”。  
+ 此外，“全部”被用来指示该样式表适用于所有介质类型。   
 
  ‘speech’ ? 屏幕阅读器 : 讲话/语音
 
 ## 下面是识别的媒体描述符的列表
 
-* screen
-  用于非分页的计算机屏幕。
-  Intended for non-paged computer screens.
-* tty
-  适用于使用固定宽字符网格的媒介，如电传打字机，终端，或具有有限显示能力的便携式设备。
+* screen  
+  用于非分页的计算机屏幕。    
+  Intended for non-paged computer screens.  
+* tty   
+  适用于使用固定宽字符网格的媒介，如电传打字机，终端，或具有有限显示能力的便携式设备。  
   Intended for media using a fixed-pitch character grid, such as teletypes, terminals, or portable devices with limited display capabilities.
-* tv
-  用于电视类设备（分辨率低，色彩，有限的可滚动）。
-  Intended for television-type devices (low resolution, color, limited scrollability).
-* projection(投影)
-  针对投影机。(Intended for projectors.)
-* handheld
-  用于手持设备（小屏幕，单色,位图图形，有限的带宽）。
-  Intended for handheld devices (small screen, monochrome, bitmapped graphics, limited bandwidth).
-* print
-  针对分页，不透明材料以及在打印预览模式下在屏幕上查看的文档。
-  Intended for paged, opaque material and for documents viewed on screen in print preview mode.
-* braille(点字/盲文)
-  Intended for braille tactile feedback devices.
-* aural(听觉)
-  用于语音合成器。(Intended for speech synthesizers.)
-* all
-  适用于所有设备。(Suitable for all devices.)
+* tv  
+  用于电视类设备（分辨率低，色彩，有限的可滚动）。  
+  Intended for television-type devices (low resolution, color, limited scrollability).  
+* projection(投影)  
+  针对投影机。(Intended for projectors.)  
+* handheld   
+  用于手持设备（小屏幕，单色,位图图形，有限的带宽）。  
+  Intended for handheld devices (small screen, monochrome, bitmapped graphics, limited bandwidth).  
+* print  
+  针对分页，不透明材料以及在打印预览模式下在屏幕上查看的文档。  
+  Intended for paged, opaque material and for documents viewed on screen in print preview mode.  
+* braille(点字/盲文)  
+  Intended for braille tactile feedback devices.  
+* aural(听觉)  
+  用于语音合成器。(Intended for speech synthesizers.)  
+* all  
+  适用于所有设备。(Suitable for all devices.)  
 
-> screen , all , all and === 
+> screen , all , all and ===  
 
 
 ```code
