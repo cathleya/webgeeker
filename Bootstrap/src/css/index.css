@@ -2,6 +2,11 @@
 @import url(./parts/main.css);
 @import url(./parts/footer.css);
 
+@import url(./media_query/print.css) print and (max-width: 768px) {
+    background: #fff;
+    color: #000;
+}
+
 main .list-group i{
     margin-right: 10px;
 }

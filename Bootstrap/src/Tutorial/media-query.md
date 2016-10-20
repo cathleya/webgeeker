@@ -37,6 +37,22 @@ W3C Recommendation 19 June 2012
 <link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css">
 <link rel="stylesheet" type="text/css" media="all and (min-width:500px)" href="serif.css">
 <link rel="stylesheet" type="text/css" media="screen and (color), projection and (min-width:500px)" href="serif.css">
+
+> 在XHTML，这可以写为：
+
+<link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css" />
+<link rel="stylesheet" type="text/css" media="all and (min-width:500px)" href="serif.css" />
+<link rel="stylesheet" type="text/css" media="screen and (color), projection and (min-width:500px)" href="serif.css" />
+
+# 在XML，这可以写为：
+
+<?xml-stylesheet media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" ?>
+
+# 用 import (no need media)，这可以写为：
+
+@import url(example.css) screen and (color), projection and (color);
+
+
 ```
 
 ## media types ?
@@ -92,21 +108,28 @@ The ‘print’ and ‘screen’ media types are defined in HTML4.
 
 ## media feature (?)
 
+### max/min (prefix) optional
+
 > Media features
 
-4.1. width  
-4.2. height  
-4.3. device-width  
-4.4. device-height  
-4.5. orientation  
-4.6. aspect-ratio   (纵横比: 16/9)  
-4.7. device-aspect-ratio  (设备纵横比)  
-4.8. color  
-4.9. color-index  (颜色索引)   
-4.10. monochrome (	单色, 黑白的)  
+4.1. width  (max/min)  
+4.2. height  (max/min)  
+4.3. device-width  (max/min)  
+4.4. device-height  (max/min)  
+4.5. orientation  (方向)  
+> Accepts min/max prefixes: no)  (portrait[height > width]/landscape[height < width])  
+
+4.6. aspect-ratio   (纵横比: 16/9)  (min/max)  
+4.7. device-aspect-ratio  (设备纵横比)  (min/max)  
+4.8. color  (min/max) 
+4.9. color-index  (颜色索引)  (min/max)  
+4.10. monochrome (	单色, 黑白的) (min/max)  
 4.11. resolution  (解析度)  
-4.12. scan  
-4.13. grid  
+4.12. scan  (Accepts min/max prefixes: no)  
+> (Value: progressive | interlace)  
+
+4.13. grid  (Accepts min/max prefixes: no)  
+> Only 0 and 1 are valid values.  
 
 ```code
 # (color)
@@ -127,14 +150,13 @@ The ‘print’ and ‘screen’ media types are defined in HTML4.
 
 > 以逗号分隔的媒体查询列表。如果一个或多个在逗号分隔列表中的媒体查询为真，整个名单是真实的，否则为false。
 
+## 单位(Units)
 
+em  (‘em’ unit is relative to the initial value of ‘font-size’.)  
 
+dpi (dots per CSS ‘inch’)  
 
-
-
-
-
-
+dpcm (dots per CSS ‘centimeter’)  
 
 
 ## keyword ‘all’
