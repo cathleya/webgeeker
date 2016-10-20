@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Bootstrap with Local libs</title>
+    <!-- <meta http-equiv="refresh" content="1; url=../Bootstrap/src/index.html"> -->
+    <!-- 自动刷新 $ 重定向 -->
+    <!-- reset css -->
+    <link rel="stylesheet" href="../css/common/normalize.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-theme.min.css"> -->
+    <!-- Bootswatch theme-->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-darkly.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../fonts/awesome/css/font-awesome.min.css">
+    <!-- SEO -->
+    <meta name="description" content="webgeeker">
+    <meta name="author" content="webgeeker">
+    <link rel="shortcut icon" href="../images/logo/logo.png" type="image/png">
+    <!-- <link rel="shortcut icon" href="../images/logo/logo.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/offcanvas.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="../assets/ie10/ie10-viewport-bug-workaround.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <!-- lines -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">WebGeeker</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">
+                                <i class="fa fa-2x fa-home" aria-hidden="true"></i>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../index.html">
+                                <i class="fa fa-2x fa-university" aria-hidden="true"></i>Tutorial
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-2x fa-wrench" aria-hidden="true"></i>Tools
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-2x fa-github-alt" aria-hidden="true"></i>GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-2x fa-info-circle" aria-hidden="true"></i>About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-2x fa-envelope-o" aria-hidden="true"></i>Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-9">
+                    <p class="pull-right visible-xs">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+                    </p>
+                    <div class="jumbotron">
+                        <h1>Hello, world!</h1>
+                        <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Heading</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <i class="fa fa-anchor" aria-hidden="true"></i>Links
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-link" aria-hidden="true"></i>link1
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-link" aria-hidden="true"></i>link2
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-link" aria-hidden="true"></i>link3
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-link" aria-hidden="true"></i>link4
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-external-link-square" aria-hidden="true"></i>link5
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-external-link-square" aria-hidden="true"></i>link6
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-external-link-square" aria-hidden="true"></i>link7
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <footer>
+                <div>
+                    <p>&copy; 2016 xgqfrms & webgeeker.</p>
+                </div>
+            </footer>
+        </div>
+        <!-- container-fluid -->
+        <div class="container">
+            <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Bootstrap with CDN</h2>
+                </div>
+                <div class="col-md-6">
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-html5" aria-hidden="true"></i><a href="#">link</a></li>
+                        <li><i class="fa-li fa fa-css3" aria-hidden="true"></i><a href="#">link</a></li>
+                        <li><i class="fa-li fa fa-code" aria-hidden="true"></i><a href="#">link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2016 xgqfrms & webgeeker.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="../libs/jquery/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/offcanvas.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/ie10/ie10-viewport-bug-workaround.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+        <script src="../assets/debug/ie8-responsive-file-warning.js"></script>
+    <![endif]-->
+    <script src="../assets/debug/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</body>
+</html>
