@@ -20,7 +20,16 @@ header nav .navbar-header a:hover{
     -webkit-transition: all 1s ease-out 0s;
     transition: all 1s ease-out 0s;
 }
-/*header nav .navbar .nav ul li a{
+
+.navbar-inverse .navbar-nav>li>a>i{
     margin-right: 10px !important;
-    background: #0f0 !important;
-}*/
+    /*background: #f0f !important;*/
+    color: #f0f !important;
+}
+.navbar-inverse .navbar-nav>li>a>i:hover{;
+    -webkit-transform: rotateZ(720deg) scale(1.5);;
+        -ms-transform: rotate(720deg) scale(1.5);;
+            transform: rotateZ(720deg) scale(1.5);
+    -webkit-transition: all 0.25s ease-in 0s;
+    transition: all 0.25s ease-in 0s;
+}
