@@ -1,3 +1,5 @@
+# http://stackoverflow.com/questions/22777734/what-is-initial-scale-user-scalable-minimum-scale-maximum-scale-attribute-in/40222507#40222507
+
 > **user-scalable**  
 user-scalable=**yes** (default) to allow the user to zoom in or zoom out on the web page;   
 user-scalable=**no** to prevent the user from zooming in or zooming out.
