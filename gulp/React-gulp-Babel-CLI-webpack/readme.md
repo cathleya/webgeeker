@@ -1,4 +1,4 @@
-# React + gulp + Babel CLI + webpack (MODULE BUNDLER)
+# React + Gulp + Babel CLI + webpack (MODULE BUNDLER)
 
 *******************************************************************************************
 *******************************************************************************************
@@ -100,9 +100,48 @@ $ babel script.js -o script-compiled.js
 $ babel script.js --watch --out-file script-compiled.js
 $ babel script.js -w -o script-compiled.js
 
-# babel index.js -w -o index-compiled.js
 
 ``` 
+***************************************************************************************  
+
+# babel index.js -w -o index-compiled.js
+## --out-file or -o  
+## --watch or -w  
+
+```sh
+# ? local path 不好使
+$ ./node_modules/.bin/babel src -d lib
+
+# cd 进入babel.exe 所在的 ./node_modules/.bin/ 目录
+$ cd ./node_modules/.bin/
+
+# 先copy 文件到该目录，再执行 (OK：传递path)
+$ babel index.js -w -o index-compiled.js
+
+# (OK：传递 相对路径 path)
+
+$ babel ../../index.js -w -o ../../index-compiled.js
+``` 
+
+
+# 推荐用法：(package.json)
+
+```json
+{
+    "name": "React-App",
+    "version": "1.0.1",
+    "scripts": {
+        "build": "babel src -d lib"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.0.0"
+    }
+}
+
+``` 
+
+***************************************************************************************  
+
 
 ### Compile with Source Maps
 
