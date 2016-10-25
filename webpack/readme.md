@@ -207,13 +207,13 @@ $ babel-node --debug --presets es2015 -- script.js --debug
 
 ### Options
 |Option | Default | Description|
-|:-----------|:------------:|------------:|
+|:-----------|:------------:|:------------|
 |-e,  --eval [script]  | |  Evaluate script
 |-p,  --print  | |  Evaluate script and print result
 |-i,  --ignore [regex]  |  node_modules  |  Ignore all files that match this regex when using the require hook
 |-x, --extensions  |  ".js",".jsx",".es6",".es"  |  List of extensions to hook into
-|--presets  |  []  |  Comma-separated list of presets (a set of plugins) to load and use.
-|--plugins  |  []  |  Comma-separated list of plugins to load and use.
+|--presets  |  [ ]  |  Comma-separated list of presets (a set of plugins) to load and use.
+|--plugins  |  [ ]  |  Comma-separated list of plugins to load and use.
 
 
 *******************************************************************************************
