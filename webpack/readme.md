@@ -1,5 +1,8 @@
 # React + gulp + Babel CLI + webpack (MODULE BUNDLER)
 
+*******************************************************************************************
+*******************************************************************************************
+
 ## gulp
 
 [Babel for Gulp](http://babeljs.io/docs/setup/#installation)
@@ -75,6 +78,7 @@ $ npm install --save-dev babel-cli
 $ npm uninstall --global babel-cli
 ``` 
 
+*******************************************************************************************
 
 ## babel
 
@@ -202,17 +206,17 @@ $ babel-node --debug --presets es2015 -- script.js --debug
 ``` 
 
 ### Options
+|Option | Default | Description|
+|:-----------|:------------:|------------:|
+|-e,  --eval [script]  | |  Evaluate script
+|-p,  --print  | |  Evaluate script and print result
+|-i,  --ignore [regex]  |  node_modules  |  Ignore all files that match this regex when using the require hook
+|-x, --extensions  |  ".js",".jsx",".es6",".es"  |  List of extensions to hook into
+|--presets  |  []  |  Comma-separated list of presets (a set of plugins) to load and use.
+|--plugins  |  []  |  Comma-separated list of plugins to load and use.
 
-Option  Default Description
--e, --eval [script]     Evaluate script
--p, --print     Evaluate script and print result
--i, --ignore [regex]    node_modules    Ignore all files that match this regex when using the require hook
--x, --extensions    ".js",".jsx",".es6",".es"   List of extensions to hook into
---presets   []  Comma-separated list of presets (a set of plugins) to load and use.
---plugins   []  Comma-separated list of plugins to load and use.
 
-
-
+*******************************************************************************************
 
 ## webpack (MODULE BUNDLER)
 
@@ -255,7 +259,7 @@ $ npm install webpack --save-dev
 
 #### Versions
 
-# There are two versions of webpack available. The stable one and a beta version. The beta version is marked with a -beta in the version string. The beta version may contain fragile changes or experimental features and is less tested. See changelog for differences. For serious stuff you should use the stable version:  
+> There are two versions of webpack available. The stable one and a beta version. The beta version is marked with a -beta in the version string. The beta version may contain fragile changes or experimental features and is less tested. See changelog for differences. For serious stuff you should use the stable version:  
 
 ```sh
 $ npm install webpack@1.2.x --save-dev
@@ -271,7 +275,7 @@ $ npm install webpack-dev-server --save-dev
 
 ``` 
 
-
+*******************************************************************************************
 
 
 
