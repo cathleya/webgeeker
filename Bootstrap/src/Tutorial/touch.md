@@ -32,7 +32,8 @@ gulp.task('watch', function() {
 
 ```js
 var gulp = require('gulp'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+	browserSync = require('browser-sync');
 
 gulp.task('html', function() {
     livereload.listen();
@@ -42,6 +43,24 @@ gulp.task('html', function() {
         .pipe(livereload());
     });
 });
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+		server:{
+			baseDir:"./"
+		}
+	});
+});
+
+gulp.task('watch', function() {
+	livereload.listen();
+	gulp.watch('src/*.html', ['html']);
+	gulp.watch('src/**', ['browser-sync']);
+});
+
+gulp.task('default',['watch'],['html'],['browser-sync']);
+
+
 
 gulp.task('sass',function(){
     var config = {};
