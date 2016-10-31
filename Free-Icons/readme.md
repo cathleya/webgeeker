@@ -16,6 +16,6 @@ http://icofont.com/icons/
 
 
 demos:
-test.html
+[test.html](test.html)
 
-index.html
+[index.html](index.html)
