@@ -10,3 +10,12 @@ BRAND (210 ICONS)
 | Class | Hex | HTML Entity | Markup |
 |:---:|:---:|:---|:---|
 | icofont-brand-acer | e998 | &amp;#xe998; | &lt;i class="icofont icofont-brand-acer">&lt;/i> |
+
+
+http://icofont.com/icons/
+
+
+demos:
+test.html
+
+index.html
