@@ -16,6 +16,6 @@ http://icofont.com/icons/
 
 
 demos:
-[test.html](test.html)
+[http://webgeeker.xyz/Free-Icons/icons.html](http://webgeeker.xyz/Free-Icons/icons.html)
 
-[index.html](index.html)
+[http://webgeeker.xyz/Free-Icons/index.html](http://webgeeker.xyz/Free-Icons/index.html)
