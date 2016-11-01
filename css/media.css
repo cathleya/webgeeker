@@ -1,0 +1,129 @@
+/*
+冗余
+.wrap{
+        width:100%;
+    }
+*/
+@media only screen and (max-width:1440px){
+    .wrap{
+        width:100%;
+    }
+}
+@media only screen and (max-width:1366px){
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:500px;
+    }
+    .da-slide p{
+        margin:0 9em;
+    }
+}
+@media only screen and (max-width:1280px){
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:480px;
+    }
+    .da-slide h2{
+        top:105px;
+        font-size:2.3em;
+    }
+    .da-slide p{
+        top:168px;
+        font-size:1.2em;
+        margin:0 8em;
+    }
+}
+@media only screen and (max-width:1024px){
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:450px;
+    }
+    .da-slide h2{
+        top:89px;
+        font-size:2.3em;
+    }
+    .da-slide p{
+        top:155px;
+        width:66%;
+        margin:0 3em;
+    }
+}
+@media only screen and (max-width:768px){
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:295px;
+    }
+    .da-slide h2{
+        top:55px;
+        font-size:2em;
+    }
+    .da-slide p{
+        top:103px;
+        font-size:1.1em;
+        width:80%;
+        margin:0 1em;
+    }
+}
+@media only screen and (max-width:640px) {
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:250px;
+    }
+    .da-slide h2{
+        top:26px;
+        font-size:1.65em;
+    }
+    .da-slide p{
+        top:70px;
+        width:73%;
+        height:60px;
+        font-size:.9em;
+        text-align:center;
+        margin:0 13px;
+    }
+}
+@media only screen and (max-width:480px){
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:200px;
+    }
+    .da-slide h2{
+        top:10px;
+        font-size:1.45em;
+    }
+    .da-slide p{
+        top:48px;
+        width:77%;
+        height:53px;
+        font-size:.85em;
+        text-align:center;
+        margin:0 8px;
+    }
+}
+@media only screen and (max-width:320px){
+    .wrap{
+        width:100%;
+    }
+    .da-slider{
+        height:150px;
+    }
+    .da-slide h2{
+        top:5px;
+        font-size:1.3em;
+    }
+    .da-slide p{
+        top:35px;
+    }
+}

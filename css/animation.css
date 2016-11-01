@@ -1,0 +1,444 @@
+/*fromRightAnim 1-4*/
+.da-slide-fromright h2{
+    -webkit-animation:fromRightAnim1 .6s ease-in-out .8s both;
+    animation:fromRightAnim1 .6s ease-in-out .8s both;
+}
+.da-slide-fromright p{
+    -webkit-animation:fromRightAnim2 .6s ease-in-out .8s both;
+    animation:fromRightAnim2 .6s ease-in-out .8s both;
+}
+.da-slide-fromright .da-link{
+    -webkit-animation:fromRightAnim3 .4s ease-in-out 1.2s both;
+    animation:fromRightAnim3 .4s ease-in-out 1.2s both;
+}
+.da-slide-fromright .da-img{
+    -webkit-animation:fromRightAnim4 .6s ease-in-out .8s both;
+    animation:fromRightAnim4 .6s ease-in-out .8s both;
+}
+@-webkit-keyframes fromRightAnim1{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fromRightAnim2{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fromRightAnim3{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    1%{
+        left:10%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fromRightAnim4{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    100%{
+        left:60%;
+        opacity:1;
+    }
+}
+@keyframes fromRightAnim1{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@keyframes fromRightAnim2{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@keyframes fromRightAnim3{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    1%{
+        left:10%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@keyframes fromRightAnim4{
+    0%{
+        left:110%;
+        opacity:0;
+    }
+    100%{
+        left:60%;
+        opacity:1;
+    }
+}
+
+/*fromLeftAnim 1-4*/
+.da-slide-fromleft h2{
+    -webkit-animation:fromLeftAnim1 .6s ease-in-out .6s both;
+    animation:fromLeftAnim1 .6s ease-in-out .6s both;
+}
+.da-slide-fromleft p{
+    -webkit-animation:fromLeftAnim2 .6s ease-in-out .6s both;
+    animation:fromLeftAnim2 .6s ease-in-out .6s both;
+}
+.da-slide-fromleft .da-link{
+    -webkit-animation:fromLeftAnim3 .4s ease-in-out 1.2s both;
+    animation:fromLeftAnim3 .4s ease-in-out 1.2s both;
+}
+.da-slide-fromleft .da-img{
+    -webkit-animation:fromLeftAnim4 .6s ease-in-out .6s both;
+    animation:fromLeftAnim4 .6s ease-in-out .6s both;
+}
+@-webkit-keyframes fromLeftAnim1{
+    0%{
+        left:-110%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fromLeftAnim2{
+    0%{
+        left:-110%;
+        opacity:0}
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fromLeftAnim3{
+    0%{
+        left:-110%;
+        opacity:0;
+    }
+    1%{
+        left:10%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fromLeftAnim4{
+    0%{
+        left:-110%;
+        opacity:0}
+    100%{
+        left:60%;
+        opacity:1;
+    }
+}
+@keyframes fromLeftAnim1{
+    0%{
+        left:-110%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@keyframes fromLeftAnim2{
+    0%{
+        left:-110%;
+        opacity:0}
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@keyframes fromLeftAnim3{
+    0%{
+        left:-110%;
+        opacity:0;
+    }
+    1%{
+        left:10%;
+        opacity:0;
+    }
+    100%{
+        left:10%;
+        opacity:1;
+    }
+}
+@keyframes fromLeftAnim4{
+    0%{
+        left:-110%;
+        opacity:0}
+    100%{
+        left:60%;
+        opacity:1;
+    }
+}
+
+/*toRightAnim 1-4*/
+.da-slide-toright h2{
+    -webkit-animation:toRightAnim1 .6s ease-in-out .6s both;
+    animation:toRightAnim1 .6s ease-in-out .6s both;
+}
+.da-slide-toright p{
+    -webkit-animation:toRightAnim2 .6s ease-in-out .3s both;
+    animation:toRightAnim2 .6s ease-in-out .3s both;
+}
+.da-slide-toright .da-link{
+    -webkit-animation:toRightAnim3 .4s ease-in-out both;
+    animation:toRightAnim3 .4s ease-in-out both;
+}
+.da-slide-toright .da-img{
+    -webkit-animation:toRightAnim4 .6s ease-in-out both;
+    animation:toRightAnim4 .6s ease-in-out both;
+}
+@-webkit-keyframes toRightAnim1{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@-webkit-keyframes toRightAnim2{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@-webkit-keyframes toRightAnim3{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    99%{
+        left:10%;
+        opacity:0;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@-webkit-keyframes toRightAnim4{
+    0%{
+        left:60%;
+        opacity:1;
+    }
+    30%{
+        left:55%;
+        opacity:1;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@keyframes toRightAnim1{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@keyframes toRightAnim2{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@keyframes toRightAnim3{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    99%{
+        left:10%;
+        opacity:0;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+@keyframes toRightAnim4{
+    0%{
+        left:60%;
+        opacity:1;
+    }
+    30%{
+        left:55%;
+        opacity:1;
+    }
+    100%{
+        left:100%;
+        opacity:0;
+    }
+}
+
+
+/*toLeftAnim 1-4*/
+.da-slide-toleft h2{
+    -webkit-animation:toLeftAnim1 .6s ease-in-out both;
+    animation:toLeftAnim1 .6s ease-in-out both;
+}
+.da-slide-toleft p{
+    -webkit-animation:toLeftAnim2 .6s ease-in-out .3s both;
+    animation:toLeftAnim2 .6s ease-in-out .3s both;
+}
+.da-slide-toleft .da-link{
+    -webkit-animation:toLeftAnim3 .6s ease-in-out .6s both;
+    animation:toLeftAnim3 .6s ease-in-out .6s both;
+}
+.da-slide-toleft .da-img{
+    -webkit-animation:toLeftAnim4 .6s ease-in-out .5s both;
+    animation:toLeftAnim4 .6s ease-in-out .5s both;
+}
+@-webkit-keyframes toLeftAnim1{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    30%{
+        left:15%;
+        opacity:1;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@-webkit-keyframes toLeftAnim2{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    30%{
+        left:15%;
+        opacity:1;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@-webkit-keyframes toLeftAnim3{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@-webkit-keyframes toLeftAnim4{
+    0%{
+        left:60%;
+        opacity:1;
+    }
+    70%{
+        left:30%;
+        opacity:0;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@keyframes toLeftAnim1{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    30%{
+        left:15%;
+        opacity:1;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@keyframes toLeftAnim2{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    30%{
+        left:15%;
+        opacity:1;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@keyframes toLeftAnim3{
+    0%{
+        left:10%;
+        opacity:1;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}
+@keyframes toLeftAnim4{
+    0%{
+        left:60%;
+        opacity:1;
+    }
+    70%{
+        left:30%;
+        opacity:0;
+    }
+    100%{
+        left:-50%;
+        opacity:0;
+    }
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*reset.css*/
+abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,
+fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,
+li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+audio,canvas,video {
+    display:inline-block;
+}
+audio:not([controls]) {
+    display:none;
+    height:0;
+}
+[hidden] {
+    display:none;
+}
+code,kbd,pre,samp {
+    font-size:1em;
+}
+pre {
+    white-space:pre;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+}
+blockquote,q {
+    quotes:&#8220 &#8220;
+}
+blockquote:after,blockquote:before,q:after,q:before s{
+    content:'';
+    content:none;
+}
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+mark {
+    background-color:#A7F4F6;
+    color:#555;
+}
+del {
+    text-decoration:line-through;
+}
+abbr[title],dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+*,:after,:before {
+    box-sizing:border-box;
+}
+html {
+    -webkit-font-smoothing:antialiased;
+}
