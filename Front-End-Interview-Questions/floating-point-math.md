@@ -1,18 +1,23 @@
-# 0.1 + 0.2 != 0.3 stackoverflow
+# 0.1 + 0.2 != 0.3 (0.1 + 0.2 = 0.30000000000000004)
 
-[floating-point-math](http://stackoverflow.com/questions/588004/is-floating-point-math-broken/40287130#40287130)
+===
+===
+[stackoverflow : floating-point-math](http://stackoverflow.com/questions/588004/is-floating-point-math-broken/40287130#40287130)
 
 [**Double-precision floating-point format** ](https://en.wikipedia.org/wiki/Double-precision_floating-point)
 
-![0.1 + 0.2 not-equal 0.3.png](0.1 + 0.2 not-equal 0.3.png)
-![dec64.png](dec64.png)
-
+*******************************************************************************************************************
 ```js
 0.1 + 0.2 != 0.3
 
 0.1 + 0.2 = 0.30000000000000004
 
 ``` 
+
+![0.1 + 0.2 not-equal 0.3.png](0.1 + 0.2 not-equal 0.3.png)
+![dec64.png](dec64.png)
+
+****************************************************************************************************************
 
 **What Every Computer Scientist Should Know About Floating-Point Arithmetic**  
 http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html  
