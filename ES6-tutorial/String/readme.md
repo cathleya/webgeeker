@@ -65,6 +65,8 @@ console.log(leftPad(colour));
 
 ``` 
 
+![ES6 new String repeat() & right-align.png](ES6 new String repeat() & right-align.png)
+
 ## errors
 
 > error1
