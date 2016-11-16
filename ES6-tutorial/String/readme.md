@@ -80,3 +80,5 @@ console.log(leftPad(colour));
 
 ref link:  
 http://wesbos.com/new-es6-string-methods/
+
+https://gist.github.com/xgqfrms-GitHub/8b20b576edb8c9e74e6dfae2655c7077
