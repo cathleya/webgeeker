@@ -1,6 +1,7 @@
 # Download Video Playlists with youtube-dl
 
 > https://www.youtube.com/watch?v=-eUd2k5M1B0
+> https://github.com/ufo-github/youtube-dl/tree/master/Tutorials  
 
 
 ## install
