@@ -102,3 +102,10 @@ form input
 
 
 https://github.com/ufo-github/stylus/tree/dev/Tutorials
+
+## demo
+
+![npm i -g stylus.png](npm i -g stylus.png)
+![stylus commands.png](stylus commands.png)
+
+
