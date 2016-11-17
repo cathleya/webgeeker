@@ -84,7 +84,20 @@ a.button {
 
 # stylus
 
-
+border-radius()
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+ 
+body a
+  font: 12px/1.4 "Lucida Grande", Arial, sans-serif
+  background: black
+  color: #ccc
+ 
+form input
+  padding: 5px
+  border: 1px solid
+  border-radius: 5px
 ``` 
 
 
