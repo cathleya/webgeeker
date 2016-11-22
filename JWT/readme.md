@@ -1,6 +1,6 @@
 # auth0
 
-
+https://github.com/auth0-blog/angular-auth
 
 
 
