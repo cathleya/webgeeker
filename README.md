@@ -5,6 +5,10 @@ webgeeker : this is a website that purpose for web geeker do some  great things!
 [webgeeker.xyz](http://webgeeker.xyz)  
 [www.webgeeker.xyz](http://www.webgeeker.xyz) 
 
+http://webgeeker.xyz/typeform.html
+
+http://webgeeker.xyz/mailchimp.html
+
 *** 
 # Font Awesome
 ### The iconic font and CSS toolkit
