@@ -19,10 +19,12 @@ https://github.com/ufo-github/node-jsonwebtoken
 
 https://github.com/xgqfrms-GitHub/RxJS/tree/master/Tutorials
 
+hacker news
+
 https://github.com/ufo-github/angular2-hn
 
 
-
+RESTful API http://restcountries.eu 
 
 
 
