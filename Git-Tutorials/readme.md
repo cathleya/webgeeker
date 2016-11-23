@@ -1,5 +1,8 @@
 # Git配置 (别名 [alias)
 
+https://www.kancloud.cn/kancloud/progit/70180
+
+
 ```sh
 $ git cm "???"
 
