@@ -3,7 +3,9 @@
 
 Sublime Text Power User-pdf.md
 
+# windows CMD terminal setting for sublime text 3!
 
+https://gist.github.com/xgqfrms-GitHub/f9273addd6c9f9d4a9556be6a4886161
 
 
 #  Sidebar Theme
