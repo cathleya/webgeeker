@@ -2,8 +2,8 @@
 webgeeker : this is a website that purpose for web geeker do some  great things!
 
 ## website
-[webgeeker.xyz](https://webgeeker.xyz)  
-[www.webgeeker.xyz](https://www.webgeeker.xyz) 
+[https://webgeeker.xyz](https://webgeeker.xyz)  
+[https://www.webgeeker.xyz](https://www.webgeeker.xyz) 
 
 https://webgeeker.xyz/typeform.html
 
