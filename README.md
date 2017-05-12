@@ -1,17 +1,18 @@
 # webgeeker
-webgeeker : this is a website that purpose for web geeker do some  great things!
+
+> webgeeker : this is a website that purpose for web geeker do some  great things!
 
 ## website
 [https://webgeeker.xyz](https://webgeeker.xyz)  
 [https://www.webgeeker.xyz](https://www.webgeeker.xyz) 
 
-https://webgeeker.xyz/typeform.html
+https://www.webgeeker.xyz/typeform.html
 
-https://webgeeker.xyz/mailchimp.html
+https://www.webgeeker.xyz/mailchimp.html
 
-https://webgeeker.xyz/wufoo.html
+https://www.webgeeker.xyz/wufoo.html
 
-https://webgeeker.xyz/twitter.html
+https://www.webgeeker.xyz/twitter.html
 
 *** 
 # Font Awesome
@@ -25,3 +26,4 @@ https://webgeeker.xyz/twitter.html
 
 
 https://www.xgqfrms.xyz
+
