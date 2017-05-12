@@ -1,5 +1,11 @@
 // ExtractTextWebpackPlugin
 
+/*
+* xgqfrms 2017.05.12
+* https://github.com/webpack-contrib/extract-text-webpack-plugin
+* https://doc.webpack-china.org/guides/migrating/#extracttextwebpackplugin-
+* 
+*/ 
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
