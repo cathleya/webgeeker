@@ -55,7 +55,7 @@ const make = 'BMW';
 const model = 'x5'
 const colour = 'Royal Blue';
 
-let leftPad = (str, length = 10) => {
+const leftPad = (str, length = 10) => {
     return `${' '.repeat(length - str.length)}${str}`;
 }
 
